@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    {% load static %}
+    <head>
+    <link rel ="stylesheet" href="{% static "css/style1.css" %}">
+    <meta charset="utf-8">
+    <title> Contact Form</title>
+    <h3>contact form</h3>
+    <style>
+        body{
+          background: url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80);
+          background-size: cover;
+        }
+      </style>
+    </head> 
+<body>
+ 
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit">
+    </form>
+
+</body>
+</html>
+
+
